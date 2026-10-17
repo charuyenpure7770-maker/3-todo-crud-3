@@ -106,6 +106,7 @@ function onAddTodo(eve){
    newObj.id = data.name;
  state.todoArr.push(newObj);
  let div = document.createElement("div");
+ div.id = data.name;
  div.className = "col-md-4 mb-3";
  div.innerHTML =    ` <ul class="list-group">
                     <li class="list-group-item d-flex justify-content-between align-items-center">
@@ -130,8 +131,10 @@ function onAddTodo(eve){
 //edit
 function onEdit(ele){
     let Edit_id = ele.closest(".col-md-4").id;
+    cl(Edit_id)
     state.edit_id = Edit_id;
     let edit_obj = state.todoArr.find(obj=> obj.id === Edit_id);
+    cl(edit_obj);
     todoControl.value = edit_obj.todoItem;
     submitBtn.classList.add("d-none");
     updateBtn.classList.remove("d-none");
