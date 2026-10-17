@@ -1,0 +1,146 @@
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    padding-bottom: 40px;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+}
+
+.todo-card,
+.todo-list-card {
+    border: none;
+    border-radius: 16px;
+    overflow: hidden;
+    background: #ffffff;
+}
+
+.header {
+    padding: 25px 15px;
+    color: #ffffff;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    border-bottom: none;
+}
+
+.header h3 {
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+.header p {
+    font-size: 13px;
+    opacity: 0.9;
+}
+
+.card-body {
+    padding: 25px;
+}
+
+.card-body label {
+    color: #343a40;
+    font-weight: 600;
+}
+
+.form-control {
+    height: 45px;
+    border: 1px solid #d8dcef;
+    border-radius: 8px;
+    box-shadow: none;
+}
+
+.form-control:focus {
+    border-color: #764ba2;
+    box-shadow: 0 0 0 3px rgba(118, 75, 162, 0.12);
+}
+
+.card-footer {
+    padding: 15px 25px;
+    background: #f8f9ff;
+    border-top: 1px solid #eeeeF5;
+}
+
+.btn {
+    border: none;
+    border-radius: 8px;
+    padding: 9px 16px;
+    font-weight: 600;
+}
+
+.btn-add {
+    color: #ffffff;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+}
+
+.btn-add:hover {
+    color: #ffffff;
+    opacity: 0.9;
+}
+
+.btn-update {
+    color: #ffffff;
+    background: linear-gradient(135deg, #11998e, #38ef7d);
+}
+
+.btn-update:hover {
+    color: #ffffff;
+    opacity: 0.9;
+}
+
+.list-header {
+    padding: 18px 22px;
+    color: #ffffff;
+    background: linear-gradient(135deg, #434343, #222222);
+    border: none;
+}
+
+.list-group-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+    padding: 17px 20px;
+    border-color: #eeeeF5;
+    overflow-wrap: anywhere;
+}
+
+.list-group-item strong {
+    color: #343a40;
+    font-size: 15px;
+}
+
+.list-group-item i {
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.list-group-item i:hover {
+    transform: scale(1.12);
+}
+
+.deleteBtn.disabled {
+    opacity: 0.4;
+    pointer-events: none;
+}
+
+.spinner {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+.spinner-border {
+    width: 3rem;
+    height: 3rem;
+    color: #764ba2;
+}
