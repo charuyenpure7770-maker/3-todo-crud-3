@@ -54,6 +54,7 @@ function showOnUi(){
     cl(data);
     objToArr(data)
   templeting(state.todoArr)
+   snackBar("data fetched successfully","success")
  })
   .catch((err)=>{
      snackBar("something went wrong");
@@ -164,6 +165,7 @@ function onUpdate(eve){
    form.reset();
      submitBtn.classList.remove("d-none");
     updateBtn.classList.add("d-none");
+     snackBar("your todo is updated successfully","success")
  })
   .catch((err)=>{
      snackBar("something went wrong");
@@ -203,6 +205,7 @@ function onRemove(ele){
    let getIndex = state.todoArr.findIndex(obj=> obj.id === remove_id);
    state.todoArr.splice(getIndex, 1);
    ele.closest(".col-md-4").remove();
+    snackBar("your todo is deleted successfully","success")
  })
   .catch((err)=>{
      snackBar(err.message,"error");
